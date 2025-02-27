@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>UniCanvas: Affordance-Aware Unified Real Image Editing via Customized Text-to-image Generation</title>
+  <title>LatexBlend: Scaling Multi-concept Customized Generation with Latent Textual Blending</title>
   <link rel="icon" type="image/x-icon" href="static/images/WIS.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,18 +52,17 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">UniCanvas: Affordance-Aware Unified Real Image Editing via Customized Text-to-image Generation</h1>
+            <h1 class="title is-1 publication-title">LatexBlend: Scaling Multi-concept Customized Generation with Latent Textual Blending</h1>
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Jian Jin, Yang Shen, Xinyang Zhao, Zhenyong Fu, Jian Yang</span>
+              <span class="author-block">Jian Jin, Zhenbo Yu, Yang Shen, Zhenyong Fu, Jian Yang</span>
                 </div>
-
-
+            
                   <div class="is-size-6 publication-authors">
                     <span class="author-block"> </span>
                   </div>
 
-                  <div class="is-size-3 publication-authors">
-                    <span class="author-block">International Journal of Computer Vision</span>
+                  <div class="is-size-4 publication-authors">
+                    <span class="author-block">CVPR 2025</span>
 
                   </div>
 
@@ -82,7 +81,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/jinjianRick/unicanvas/" target="_blank"
+                    <a href="https://github.com/jinjianRick/latexblend" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -125,16 +124,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            The demand for assorted conditional edits on a single real image is becoming increasingly prevalent.
-            We focus on two dominant editing tasks that respectively condition on image and text input, namely subject-driven editing and semantic editing.
-            Previous studies typically tackle these two editing tasks separately, 
-            thereby demanding multiple editing processes to achieve versatile edits on a single image.
-            However, fragmented and sequential editing processes not only require more user effort but also further degrade the editing quality.
-            In this paper, we propose UniCanvas, an affordance-aware unified framework that can achieve high-quality parallel subject-driven and semantic editing on a single real image within one inference process.
-            UniCanvas innovatively unifies the multimodal inputs of the editing task into the textual condition space using tailored customization strategies.
-            Building upon the unified representations, we propose a novel inference pipeline that performs parallel editing by selectively blending and manipulating two collaborative text-to-image generative branches.
-            Customization enables the editing process to harness the strong visual understanding and reasoning capability of pre-trained generative models for affordance perception, and a unified inference space further facilitates more effective affordance interaction and alignment for compelling editing.
-            Extensive experiments on diverse real image demonstrate that UniCanvas exhibits powerful scene affordance perception in unified image editing, achieving seamless subject-driven editing and precise semantic editing for various target subject and query prompts.
+            Customized text-to-image generation renders user-specified concepts into novel contexts based on textual prompts.
+            Scaling the number of concepts in customized generation meets a broader demand for user creation, whereas existing methods face challenges with generation quality and computational efficiency.
+            In this paper, we propose LatexBlend, a novel framework for effectively and efficiently scaling multi-concept customized generation.
+            The core idea of LatexBlend is to represent single concepts and blend multiple concepts within a \underline{\textbf{La}}tent \underline{\textbf{Tex}}tual space, which is positioned after the text encoder and a linear projection.
+            \latexblend customizes each concept individually, storing them in a concept bank with a compact representation of latent textual features that captures sufficient concept information to ensure high fidelity.
+            At inference, concepts from the bank can be freely and seamlessly combined in the latent textual space, offering two key merits for multi-concept generation: 1) excellent scalability, and 2) significant reduction of denoising deviation, preserving coherent layouts.
+            Extensive experiments demonstrate that \latexblend can flexibly integrate multiple customized concepts with harmonious structures and high subject fidelity, substantially outperforming baselines in both generation quality and computational efficiency.
           </p>
         </div>
       </div>
