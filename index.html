@@ -106,9 +106,8 @@
       <img src="pics/teaser.png" alt="Teaser Image" width="1200px">
       <!-- Insert Title -->
       <h2 class="subtitle has-text-left" style="font-size: 13px;">
-        Given a source real image and a target subject specified by several reference images, UniCanvas can seamlessly render the target subject
-        into a designated region of the source image, while simultaneously being able to perform semantic edits on the resultant image in a precise and
-        effortless manner.
+        LatexBlend simultaneously addresses two key challenges in scaling multi-concept generation: ensuring high generation quality
+        (including concept fidelity and layout coherence) and maintaining computational efficiency.
       </h2>
     </div>
   </div> 
@@ -127,10 +126,10 @@
             Customized text-to-image generation renders user-specified concepts into novel contexts based on textual prompts.
             Scaling the number of concepts in customized generation meets a broader demand for user creation, whereas existing methods face challenges with generation quality and computational efficiency.
             In this paper, we propose LatexBlend, a novel framework for effectively and efficiently scaling multi-concept customized generation.
-            The core idea of LatexBlend is to represent single concepts and blend multiple concepts within a \underline{\textbf{La}}tent \underline{\textbf{Tex}}tual space, which is positioned after the text encoder and a linear projection.
-            \latexblend customizes each concept individually, storing them in a concept bank with a compact representation of latent textual features that captures sufficient concept information to ensure high fidelity.
+            The core idea of LatexBlend is to represent single concepts and blend multiple concepts within a Latent Textual space, which is positioned after the text encoder and a linear projection.
+            LatexBlend customizes each concept individually, storing them in a concept bank with a compact representation of latent textual features that captures sufficient concept information to ensure high fidelity.
             At inference, concepts from the bank can be freely and seamlessly combined in the latent textual space, offering two key merits for multi-concept generation: 1) excellent scalability, and 2) significant reduction of denoising deviation, preserving coherent layouts.
-            Extensive experiments demonstrate that \latexblend can flexibly integrate multiple customized concepts with harmonious structures and high subject fidelity, substantially outperforming baselines in both generation quality and computational efficiency.
+            Extensive experiments demonstrate that LatexBlend can flexibly integrate multiple customized concepts with harmonious structures and high subject fidelity, substantially outperforming baselines in both generation quality and computational efficiency.
           </p>
         </div>
       </div>
@@ -153,42 +152,23 @@
           <tr>
             <td colspan="3">
               <p>
-                We achieve affordance-aware unified editing based on text-to-image model customization, inspired by its two key merits. First, a unified image editing task takes
-                two modalities as input, i.e., textual prompts and images.
-                Text-to-image model customization can convert images into
-                textual conditions, unifying two types of input to the same
-                modality, thereby paving the way for unified editing. Furthermore, large-scale pre-trained models exhibit powerful
-                generative priors for visual understanding and reasoning.
-                Model customization implants the visual concept into pretrained models, providing a potential solution to unlock the
-                models’ capacity for scene affordance perception in image
-                editing.
+                We propose LatexBlend, a novel framework for effectively and efficiently scaling multi-concept customized text-to-image generation.
+                The core idea of LatexBlend is to represent single concepts and blend multiple concepts within a latent textual space, which is positioned after the text encoder and a linear projection.
+                We identify that the latent textual space is a pivotal point in conditional diffusion models for customized generation, as it encompasses sufficient customized information without being too deep to induce costly merging.
+                Besides, blending customized concepts in this space can eliminate their interference in the earlier textual encoding process, thereby reducing denoising deviation.
+                Therefore, LatexBlend can efficiently integrate multiple customized concepts with high subject fidelity and coherent layouts.
               </p>
             </td>
           </tr>
             <td colspan="3" style="text-align: center;">
-              <img src="pics/method1.png" alt="" width="500" />
+              <img src="pics/method.png" alt="" width="500" />
             <h2 class="subtitle has-text-left" style="font-size: 13px;">
-              Overall pipeline of the fine-tuning process.
-              (a) Target subject customization. 
-              We introduce Region-Aware Customization (RAC) strategy to target subject fine-tuning.
-              RAC incorporates the generation region R_f of the subject as an additional condition, alongside Region Variability Augmentation (RVA) for data construction and a dedicated novel prompt scheme.
-              (b) Source image customization. The model is fine-tuned with a single image-prompt pair.
+               Overall framework of the proposed \latexblend.  
+               LatexBlend customizes each concept individually and stores them in a concept bank with a compact representation of latent textual features.
+               At inference, concepts from the bank can be seamlessly combined in the latent textual space on the fly for multi-concept generation, without needing any additional tuning.
             </td>
           </tr>
-
-          </tr>
-            <td colspan="3" style="text-align: center;">
-              <img src="pics/method2.png" alt="" width="1000" />
-            <h2 class="subtitle has-text-left" style="font-size: 13px;">
-              Overall framework of the inference process.
-              UniCanvas achieves unified editing with two collaborative text-to-image generative branches, namely the subject branch and the image branch.
-              The subject branch is conditioned on P_C_f and is tasked with generating the target subject in the specified region, while the image branch is conditioned on P_X_s and is responsible for faithfully reconstructing the source image.
-              These two generative branches are integrated using a Selective Blending Module (SBM) at each cross-attention layer to achieve subject-driven editing.
-              SBM employs cross-attention maps to dynamically determine aggregation weights of two branches.
-              Semantic editing can be performed on both the blended subject and the source image by making corresponding textual modifications to P_C_f and P_X_s.
-            </td>
-          </tr>
-
+        
         </tbody>
       </table>
       
@@ -196,53 +176,6 @@
       </div>
   </section>
 <!--End paper poster -->
-
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <h2 class="title is-3">UniCanvas Editing results</h2>
-          <div class="content has-text-justified">
-            <td colspan="3">
-              <p style="margin-top: -12px;">
-              </p>
-            </td>
-  <!-- </td> -->
-          <tr>
-            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
-              <img src="pics/res1.png" alt="" width="1000" />
-              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
-                Result 1: Subject-driven Editing.
-              </h2>
-            </td>
-          </tr>
-          
-          <tr>
-            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
-              <!-- Ensure image is centered with display block and margin auto -->
-              <img src="pics/res3.png" alt="" width="500" style="display: block; margin: 0 auto;" />
-              <!-- Ensure title is centered -->
-              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
-                Result 2: Cross-Domain Subject-driven Editing.
-              </h2>
-            </td>
-          </tr>
-            
-          <tr>
-            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
-              <!-- Ensure image is centered with display block and margin auto -->
-              <img src="pics/res2.png" alt="" width="1000" style="display: block; margin: 0 auto;" />
-              <!-- Ensure title is centered -->
-              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
-                Result 3: Unified Editing.
-              </h2>
-            </td>
-          </tr>
-  
-</section>
-
-
             
 <section class="hero is-light">
   <div class="hero-body">
@@ -260,7 +193,7 @@
             <td colspan="3" style="text-align: center; padding-bottom: 30px;">
               <img src="pics/comp1.png" alt="" width="1000" />
               <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
-                Comparison 1: Subject-driven Editing.
+                Visual Comparisons.
               </h2>
             </td>
           </tr>
@@ -271,7 +204,7 @@
               <img src="pics/comp2.png" alt="" width="1000" style="display: block; margin: 0 auto;" />
               <!-- Ensure title is centered -->
               <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
-                Comparison 2: Semantic Editing.
+                Visual comparison of generations with additional layout conditioning.
               </h2>
             </td>
           </tr>
@@ -281,13 +214,11 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{jin2025unicanvas,
-        title={UniCanvas: Affordance-Aware Unified Real Image Editing via Customized Text-to-Image Generation},
-        author={Jin, Jian and Shen, Yang and Zhao, Xinyang and Fu, Zhenyong and Yang, Jian},
-        journal={International Journal of Computer Vision},
-        pages={1--25},
-        year={2025},
-        publisher={Springer}
+      <pre><code>@inproceedings{jin2025latexblend,
+        title={LatexBlend: Scaling Multi-concept Customized Generation with Latent Textual Blending},
+        author={Jin, Jian and Zhenbo, Yu and Yang, Shen and Fu, Zhenyong and Yang, Jian},
+        booktitle=CVPR,
+        year={2025}
       }</code></pre>
     </div>
 </section>
