@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>UniCanvas: Affordance-Aware Unified Real Image Editing via Customized Text-to-image Generation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/WIS.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">UniCanvas: Affordance-Aware Unified Real Image Editing via Customized Text-to-image Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Jian Jin, Yang Shen, Xinyang Zhao, Zhenyong Fu, Jian Yang</span>
+                </div>
+
+
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block"> </span>
+                  </div>
+
+                  <div class="is-size-3 publication-authors">
+                    <span class="author-block">International Journal of Computer Vision</span>
+
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href='./unicanvas_ijcv.pdf' target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/jinjianRick/unicanvas/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+<!-- Teaser Section with Image and Title -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Insert Image -->
+      <img src="pics/teaser.png" alt="Teaser Image" width="1200px">
+      <!-- Insert Title -->
+      <h2 class="subtitle has-text-left" style="font-size: 13px;">
+        Given a source real image and a target subject specified by several reference images, UniCanvas can seamlessly render the target subject
+        into a designated region of the source image, while simultaneously being able to perform semantic edits on the resultant image in a precise and
+        effortless manner.
+      </h2>
+    </div>
+  </div> 
+</section>
+<!-- End teaser section with image and title -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The demand for assorted conditional edits on a single real image is becoming increasingly prevalent.
+            We focus on two dominant editing tasks that respectively condition on image and text input, namely subject-driven editing and semantic editing.
+            Previous studies typically tackle these two editing tasks separately, 
+            thereby demanding multiple editing processes to achieve versatile edits on a single image.
+            However, fragmented and sequential editing processes not only require more user effort but also further degrade the editing quality.
+            In this paper, we propose UniCanvas, an affordance-aware unified framework that can achieve high-quality parallel subject-driven and semantic editing on a single real image within one inference process.
+            UniCanvas innovatively unifies the multimodal inputs of the editing task into the textual condition space using tailored customization strategies.
+            Building upon the unified representations, we propose a novel inference pipeline that performs parallel editing by selectively blending and manipulating two collaborative text-to-image generative branches.
+            Customization enables the editing process to harness the strong visual understanding and reasoning capability of pre-trained generative models for affordance perception, and a unified inference space further facilitates more effective affordance interaction and alignment for compelling editing.
+            Extensive experiments on diverse real image demonstrate that UniCanvas exhibits powerful scene affordance perception in unified image editing, achieving seamless subject-driven editing and precise semantic editing for various target subject and query prompts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper poster -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+        
+      <table width="800" border="0">
+        <tbody>
+          <tr>
+            <td colspan="3">
+              <p>
+                We achieve affordance-aware unified editing based on text-to-image model customization, inspired by its two key merits. First, a unified image editing task takes
+                two modalities as input, i.e., textual prompts and images.
+                Text-to-image model customization can convert images into
+                textual conditions, unifying two types of input to the same
+                modality, thereby paving the way for unified editing. Furthermore, large-scale pre-trained models exhibit powerful
+                generative priors for visual understanding and reasoning.
+                Model customization implants the visual concept into pretrained models, providing a potential solution to unlock the
+                models’ capacity for scene affordance perception in image
+                editing.
+              </p>
+            </td>
+          </tr>
+            <td colspan="3" style="text-align: center;">
+              <img src="pics/method1.png" alt="" width="500" />
+            <h2 class="subtitle has-text-left" style="font-size: 13px;">
+              Overall pipeline of the fine-tuning process.
+              (a) Target subject customization. 
+              We introduce Region-Aware Customization (RAC) strategy to target subject fine-tuning.
+              RAC incorporates the generation region R_f of the subject as an additional condition, alongside Region Variability Augmentation (RVA) for data construction and a dedicated novel prompt scheme.
+              (b) Source image customization. The model is fine-tuned with a single image-prompt pair.
+            </td>
+          </tr>
+
+          </tr>
+            <td colspan="3" style="text-align: center;">
+              <img src="pics/method2.png" alt="" width="1000" />
+            <h2 class="subtitle has-text-left" style="font-size: 13px;">
+              Overall framework of the inference process.
+              UniCanvas achieves unified editing with two collaborative text-to-image generative branches, namely the subject branch and the image branch.
+              The subject branch is conditioned on P_C_f and is tasked with generating the target subject in the specified region, while the image branch is conditioned on P_X_s and is responsible for faithfully reconstructing the source image.
+              These two generative branches are integrated using a Selective Blending Module (SBM) at each cross-attention layer to achieve subject-driven editing.
+              SBM employs cross-attention maps to dynamically determine aggregation weights of two branches.
+              Semantic editing can be performed on both the blended subject and the source image by making corresponding textual modifications to P_C_f and P_X_s.
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      
+      </div>
+      </div>
+  </section>
+<!--End paper poster -->
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">UniCanvas Editing results</h2>
+          <div class="content has-text-justified">
+            <td colspan="3">
+              <p style="margin-top: -12px;">
+              </p>
+            </td>
+  <!-- </td> -->
+          <tr>
+            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
+              <img src="pics/res1.png" alt="" width="1000" />
+              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
+                Result 1: Subject-driven Editing.
+              </h2>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
+              <!-- Ensure image is centered with display block and margin auto -->
+              <img src="pics/res3.png" alt="" width="500" style="display: block; margin: 0 auto;" />
+              <!-- Ensure title is centered -->
+              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
+                Result 2: Cross-Domain Subject-driven Editing.
+              </h2>
+            </td>
+          </tr>
+            
+          <tr>
+            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
+              <!-- Ensure image is centered with display block and margin auto -->
+              <img src="pics/res2.png" alt="" width="1000" style="display: block; margin: 0 auto;" />
+              <!-- Ensure title is centered -->
+              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
+                Result 3: Unified Editing.
+              </h2>
+            </td>
+          </tr>
+  
+</section>
+
+
+            
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Comparisons</h2>
+          <div class="content has-text-justified">
+            <td colspan="3">
+              <p style="margin-top: -12px;">
+              </p>
+            </td>
+  <!-- </td> -->
+          <tr>
+            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
+              <img src="pics/comp1.png" alt="" width="1000" />
+              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
+                Comparison 1: Subject-driven Editing.
+              </h2>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
+              <!-- Ensure image is centered with display block and margin auto -->
+              <img src="pics/comp2.png" alt="" width="1000" style="display: block; margin: 0 auto;" />
+              <!-- Ensure title is centered -->
+              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
+                Comparison 2: Semantic Editing.
+              </h2>
+            </td>
+          </tr>
+            
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{jin2025unicanvas,
+        title={UniCanvas: Affordance-Aware Unified Real Image Editing via Customized Text-to-Image Generation},
+        author={Jin, Jian and Shen, Yang and Zhao, Xinyang and Fu, Zhenyong and Yang, Jian},
+        journal={International Journal of Computer Vision},
+        pages={1--25},
+        year={2025},
+        publisher={Springer}
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <!-- <h2 class="title is-3"></h2> -->
+          <div class="content has-text-justified">
+  <p>
+    <a name="ref-ebsynth" id="ref-ebsynth"></a>
+    <!-- [6] Gwanghyun Kim, Taesung Kwon, and Jong Chul Ye. Diffusionclip: Text-guided diffusion models for robust image manipulation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022. -->
+  </p>
+  </div>
+        </div>
+      </div>
+    </div>  
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const videoWrappers = document.querySelectorAll('.video-wrapper');
+      
+        videoWrappers.forEach(wrapper => {
+          const defaultVideo = wrapper.querySelector('.default-video');
+          const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+          const height = wrapper.offsetWidth / aspectRatio;
+      
+          wrapper.style.height = `${height}px`;
+      
+          wrapper.addEventListener('mouseenter', () => {
+            defaultVideo.pause();
+            hoverVideo.play();
+          });
+      
+          wrapper.addEventListener('mouseleave', () => {
+            defaultVideo.play();
+            hoverVideo.pause();
+          });
+        });
+      }); 
+      $(document).ready(function() {
+        var carouselItems = $('.carousel .item');
+        var numItems = carouselItems.length;
+        var numVideos = 5;
+        var currentIndex = 0;
+    
+        $('.carousel').on('click', function() {
+          currentIndex++;
+          if (currentIndex + numVideos <= numItems) {
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          } else {
+            currentIndex = 0;
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          }
+        });
+    
+        carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+      });
+    </script>
+  </body>
+  </html>
