@@ -1,7 +1,8 @@
 
 # LatexBlend: Scaling Multi-concept Customized Generation with Latent Textual Blending (CVPR 2025)
 
-<a href="https://arxiv.org/abs/2503.06956"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
+<a href="https://arxiv.org/abs/2503.06956"><img src="https://img.shields.io/static/v1?label=arXiv&message=Paper&color=red"></a>
+<a href="https://jinjianrick.github.io/latexblend/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
 
 ![method](pics/method.png)
 
