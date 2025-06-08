@@ -10,7 +10,7 @@ We propose LatexBlend, a novel framework for effectively and efficiently scaling
 
 > <a href="https://jinjianrick.github.io/latexblend/">**LatexBlend: Scaling Multi-concept Customized Generation with Latent Textual Blending**</a>
 >
->   Jian Jin,
+>   <a href="https://github.com/jinjianRick">Jian Jin</a>,
     Zhenbo Yu,
     <a href="https://aassxun.github.io/">Yang Shen</a>,
     Zhenyong Fu,
