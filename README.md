@@ -3,7 +3,7 @@
 
 <a href="https://jinjianrick.github.io/unicanvas/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
 
-![method](assests/method.png)
+![method](pics/method.png)
 
 We propose LatexBlend, a novel framework for effectively and efficiently scaling multi-concept customized text-to-image generation. The core idea of LatexBlend is to represent single concepts and blend multiple concepts within a latent textual space, which is positioned after the text encoder and a linear projection. We identify that the latent textual space is a pivotal point in conditional diffusion models for customized generation, as it encompasses sufficient customized information without being too deep to induce costly merging. Besides, blending customized concepts in this space can eliminate their interference in the earlier textual encoding process, thereby reducing denoising deviation. Therefore, LatexBlend can efficiently integrate multiple customized concepts with high subject fidelity and coherent layouts.
 
@@ -18,9 +18,9 @@ We propose LatexBlend, a novel framework for effectively and efficiently scaling
 > In CVPR 2025
 
 ## Results
-![Result1](assets/res1.png)
+![Result1](pics/comp1.png)
 
-![Result2](assets/res2.png)
+![Result2](pics/comp2.png)
 
 
 ## Getting Started
