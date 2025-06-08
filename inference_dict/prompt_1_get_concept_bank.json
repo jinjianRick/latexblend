@@ -1,0 +1,18 @@
+[
+    {
+        "prompt": "photo of a guitar",
+        "modifier_tokens": "<new1>",
+        "batch_size": 2,
+        "num_inference_steps": 100,
+        "concept_num": 1,
+        "get_concept_bank": true,
+        "blending_guidance": false,
+        "self_rectification": false,
+        "concept_path": "concept_bank/n_2_guitar_1500.pt",
+        "concept1":{
+            "prompt": "photo of <new1> guitar", 
+            "class_noun": "guitar",
+            "delta_ckpt": "logs/guitar_1500_rprefix/delta.bin"
+        }
+    }
+]
