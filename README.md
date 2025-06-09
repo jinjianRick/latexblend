@@ -54,6 +54,8 @@ accelerate config default
 
 **Pre-trained model**: "stabilityai/stable-diffusion-xl-base-1.0"
 
+Download the concept data for the provided examples from [here](https://drive.google.com/file/d/1OIjRpD7CW0lAbCKrKmGxrza5I_o-G_F7/view?usp=drive_link).
+
 ## Stpe1 Fine-tuning
 
 Modify the parameters in `train.sh`, then run:
