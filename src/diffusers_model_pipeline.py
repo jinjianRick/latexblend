@@ -1254,13 +1254,10 @@ class LaTexBlendXLPipeline(StableDiffusionXLPipeline):
         concept_list['align_dict'] = align_dict
         concept_list['bind_dict'] = bind_dict
 
+        # register hook
         def hook_fn(module, input, output):
             positive_loss.append(module.processor.positive_loss)
             negative_loss.append(module.processor.negative_loss)
-
-        # register hook
-        positive_loss = []
-        negative_loss = []
 
         def register_hook(model):
             for name, layer in model.named_children():
@@ -1282,6 +1279,9 @@ class LaTexBlendXLPipeline(StableDiffusionXLPipeline):
                 attn_dict = {}
                 attn_dict['self_attn'] = {}
                 attn_dict['cross_attn'] = {}
+
+                positive_loss = []
+                negative_loss = []
  
                 for name in self.unet.attn_processors.keys():
                     if concept_list['self_rectification']:
