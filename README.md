@@ -58,6 +58,8 @@ Download the concept data for the provided examples from [here](https://drive.go
 
 ## Stpe1 Fine-tuning
 
+Sufficient fine-tuning steps are important to get high-fidelity concept representation. Increase the fine-tuning step ```max_steps``` in ```train.sh``` if the concept fidelity is unsatisfactory.
+
 Modify the parameters in `train.sh`, then run:
 
 ```
@@ -65,7 +67,6 @@ bash train.sh
 ```
 **Regularization data:** Download more regularization data from [here](https://drive.google.com/file/d/1-oYRCLq87dKnMm6h8-y6X4WZ5_CU2CoM/view?usp=sharing) or curate your own using the format of the provided examples.
 
-Increase the fine-tuning step ```max_steps``` in ```train.sh``` if the concept fidelity is unsatisfactory.
 
 ## Step2 Extract concept representations
 
