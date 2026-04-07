@@ -8,7 +8,7 @@ ins_prompt=("<new1> dog" "<new1> castle" "<new1> guitar")      # format: "<ident
 rep_prompt=("a dog" "a castle" "a guitar")                     # format: "a <class_noun>"
 class_noun=("dog" "castle" "guitar")                           # format: "<class_noun>"
 
-max_steps=(1500 1500 1500)
+max_steps=(1500 1500 1500)   # Note: Double the steps if you use 1 GPU
 
 length=${#ins_dir[@]}
 
@@ -17,7 +17,7 @@ length=${#ins_dir[@]}
 i=0
 while [ $i -lt $length ]; do
 
-    accelerate launch --num_processes 2 src/diffusers_training_sdxl.py \
+    accelerate launch --num_processes 2 src/diffusers_training_sdxl.py \   # Note: Double the steps if you use 1 GPU
           --pretrained_model_name_or_path=stabilityai/stable-diffusion-xl-base-1.0  \
           --instance_data_dir="${ins_dir[$i]}"  \
           --class_data_dir="${reg_dir[$i]}" \
